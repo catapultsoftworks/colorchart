@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Grade:</b>
+  <%= @classgroup.grade %>
+</p>
+
+<p>
+  <b>Year:</b>
+  <%= @classgroup.year %>
+</p>
+
+
+<%= link_to 'Edit', edit_classgroup_path(@classgroup) %> |
+<%= link_to 'Back', classgroups_path %>

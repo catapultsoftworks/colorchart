@@ -1,0 +1,17 @@
+<%= form_for(@daily_outcome) do |f| %>
+  <% if @daily_outcome.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@daily_outcome.errors.count, "error") %> prohibited this daily_outcome from being saved:</h2>
+
+      <ul>
+      <% @daily_outcome.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

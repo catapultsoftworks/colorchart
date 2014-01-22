@@ -1,0 +1,29 @@
+<h1>Editing user</h1>
+
+<%= form_for @user do |f| %>
+<p>
+	<%= f.label :first %>
+	<%= f.text_field :first %>
+</p>
+<p>
+	<%= f.label :last %>
+	<%= f.text_field :last %>
+</p>
+<p>
+	<%= f.label :email %>
+	<%= f.text_field :email %>
+</p>
+<p>
+	<%= hidden_field_tag "user[role_ids][]" %>
+	<% Role.all.each do |r| %>
+		
+		
+		<%= check_box_tag :role_ids, r.id, @user.roles.include?(r), :name => 'user[role_ids][]' %>
+		<%= label_tag :roles, r.name %>
+	<% end %>	
+</p>
+	<%= f.submit 'Update User' %>
+<% end %>
+
+<%= link_to 'Show', @user %> |
+<%= link_to 'Back', users_path %>

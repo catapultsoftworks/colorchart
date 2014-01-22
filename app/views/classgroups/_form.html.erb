@@ -1,0 +1,25 @@
+<%= form_for(@classgroup) do |f| %>
+  <% if @classgroup.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@classgroup.errors.count, "error") %> prohibited this classgroup from being saved:</h2>
+
+      <ul>
+      <% @classgroup.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :grade %><br />
+    <%= f.text_field :grade %>
+  </div>
+  <div class="field">
+    <%= f.label :year %><br />
+    <%= f.text_field :year %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,35 @@
+
+<style>
+td, th{
+width:12.5%;
+}
+td.outcomeRadioCell{
+text-align:center;
+}
+</style>
+<table class="table">
+<thead>
+<tr>
+    <th>Student</th>
+    <th>Absent</th>
+    <% @behaviors.each do |b|  %>
+       <th><%=b.name%></th>
+    <% end %>
+</tr>
+</thead>
+<tbody>
+<% @classgroup.students.each do |s| %>
+<tr class="outcomeRow">
+<td><%= s.lastFirst %>
+</td>
+       <td class="outcomeRadioCell" style="background-color:gray"><input type="radio"></td>
+    <% @behaviors.each do |b|  %>
+       <td class="outcomeRadioCell" style="background-color:<%= b.colorName%>"><input type="radio"
+        <% if b.rank == 4 then %>checked="checked"<% end %>
+	></td>
+    <% end %>
+
+</tr>
+<% end %>
+</tbody>
+</table>

@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Rank:</b>
+  <%= @behavior_rank.rank %>
+</p>
+
+<p>
+  <b>Colorname:</b>
+  <%= @behavior_rank.colorName %>
+</p>
+
+<p>
+  <b>Colorcode:</b>
+  <%= @behavior_rank.colorCode %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @behavior_rank.name %>
+</p>
+
+
+<%= link_to 'Edit', edit_behavior_rank_path(@behavior_rank) %> |
+<%= link_to 'Back', behavior_ranks_path %>

@@ -1,0 +1,29 @@
+<h1>Listing behavior_ranks</h1>
+
+<table>
+  <tr>
+    <th>Rank</th>
+    <th>Colorname</th>
+    <th>Colorcode</th>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @behavior_ranks.each do |behavior_rank| %>
+  <tr>
+    <td><%= behavior_rank.rank %></td>
+    <td><%= behavior_rank.colorName %></td>
+    <td><%= behavior_rank.colorCode %></td>
+    <td><%= behavior_rank.name %></td>
+    <td><%= link_to 'Show', behavior_rank %></td>
+    <td><%= link_to 'Edit', edit_behavior_rank_path(behavior_rank) %></td>
+    <td><%= link_to 'Destroy', behavior_rank, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Behavior rank', new_behavior_rank_path %>

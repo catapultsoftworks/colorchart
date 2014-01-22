@@ -1,0 +1,2 @@
+module ClassDailyOutcomesHelper
+end

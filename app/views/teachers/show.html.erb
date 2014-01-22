@@ -1,0 +1,24 @@
+
+<h1>  
+  <%= @teacher.first + " " + @teacher.last + "'s Classes" %>
+</h1>
+ 
+<% @teacher.classgroups.each do |c| %>
+    <% if ( c == @teacher.classgroups.first ) then %>
+      <div class="firstClass">
+    <% else %>
+      <div>
+    <% end %> 
+
+    <%= c.year.to_s + "-" + (c.year+1).to_s + " " + c.grade %><br/>
+    <%= link_to "Roster" %> <%= link_to "Daily Outcomes", controller: :class_daily_outcomes, action: :show, id: c.id %><br/>
+
+    </div>
+    <% if ( c == @teacher.classgroups.first ) then %>
+    <% end %>
+<% end %>
+
+<!---
+<%= link_to 'Edit', edit_teacher_path(@teacher) %> |
+<%= link_to 'Back', teachers_path %>
+--->

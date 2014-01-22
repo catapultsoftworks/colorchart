@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  student_id: 1
+  classgroup_id: 1
+  behavior_rank: 
+  date: 2013-08-31
+  comment: MyString
+
+two:
+  student_id: 1
+  classgroup_id: 1
+  behavior_rank: 
+  date: 2013-08-31
+  comment: MyString
